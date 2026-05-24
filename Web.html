@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pulang Ke Desa Para Petarung</title>
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins', sans-serif, Arial;
+    background:linear-gradient(to bottom,#f7f2ea,#e8dccb);
+    overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url('foto leluhur nias.jpg.jpeg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+    text-align:center;
+
+    animation:fadeIn 2s ease;
+}
+
+header h1{
+    font-size:4rem;
+    text-shadow:3px 3px 10px rgba(0,0,0,0.6);
+    animation:slideDown 1.5s ease;
+}
+
+header p{
+    margin-top:15px;
+    font-size:1.3rem;
+    letter-spacing:2px;
+    animation:fadeUp 2s ease;
+}
+
+/* NAVBAR */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:999;
+
+    background:rgba(34,34,34,0.95);
+
+    display:flex;
+    justify-content:center;
+    gap:30px;
+
+    padding:15px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    position:relative;
+    transition:0.3s;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    width:0%;
+    height:3px;
+    background:#f0a500;
+    left:0;
+    bottom:-6px;
+    transition:0.4s;
+}
+
+nav a:hover{
+    color:#f0a500;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* CONTAINER */
+
+.container{
+    padding:60px 8%;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-bottom:60px;
+}
+
+.card{
+    background:white;
+    padding:40px 20px;
+    border-radius:80px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+.card h2{
+    font-size:2.2rem;
+    color:#8b5e3c;
+    margin: bottom 20px;
+}
+
+/* HISTORY */
+
+.history{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    margin-bottom:50px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.history h2{
+    color:#8b5e3c;
+    margin-bottom:20px;
+    font-size:2rem;
+}
+
+.history p{
+    line-height:1.9;
+    margin-bottom:15px;
+    text-align:justify;
+}
+
+/* GALERI */
+
+#galeri h2{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:2rem;
+    color:#8b5e3c;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width: 100%;;
+    height:280px;
+    object-fit:cover;
+
+    border-radius:20px;
+
+    transition:0.5s;
+    cursor:pointer;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.gallery img:hover{
+    transform:scale(1.15);
+    filter:brightness(1.1);
+}
+
+/* FOOTER */
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes slideDown{
+    from{
+        transform:translateY(-50px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        transform:translateY(50px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:2.5rem;
+    }
+
+    header p{
+        font-size:1rem;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Pulang ke Kampung Tua</h1>
+    <p>Bawolowalani Village</p>
+</header>
+
+<nav>
+    <a href="#">Beranda</a>
+    <a href="Sejarah.html">Sejarah</a>
+    <a href="#galeri">Galeri</a>
+</nav>
+
+<div class="container">
+
+    <!-- DASHBOARD -->
+    <div class="dashboard">
+<div class="card">
+            <h2>1,750 jiwa</h2>
+            <p>Jumlah Penduduk</p>
+        </div>
+
+        <div class="card">
+            <h2>Sarumaha</h2>
+            <p>Marga Mayoritas</p>
+        </div>
+
+        <div class="card">
+            <h2>Nias Selatan</h2>
+            <p>Budaya</p>
+        </div>
+
+        <div class="card">
+            <h2>Tradisional</h2>
+            <p>Arsitektur</p>
+        </div>
+    </div>
+    <!-- GALERI -->
+    <div id="galeri">
+
+        <h2>Galeri Budaya Desa</h2>
+
+        <div class="gallery">
+
+            <img src="foto leluhur nias 2.jpeg">
+
+            <img src="foto leluhur nias 3.jpg.jpeg">
+
+            <img src="foto leluhur nias.jpg.jpeg">
+
+            <img src="Bawolowalani 1.jpeg">
+
+            <img src="Bawolowalani 2.jpeg">
+
+            <img src="Bawolowalani 3.jpeg">
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Kampung Hilisitera | Website Sejarah & Budaya</p>
+</footer>
+
+</body>
+</html>
